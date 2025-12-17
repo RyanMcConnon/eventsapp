@@ -11,4 +11,4 @@ spec:
   selector:
     app: autoscale
     env: training
-  type: LoadBalancer  
+  type: LoadBalancer

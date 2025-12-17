@@ -1,8 +1,8 @@
-apiVersion: apps/v1 
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: autoscale-app
-spec: 
+spec:
   selector:
     matchLabels:
       app: autoscale
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nodejs-loop
-        image: coursedemos/nodejs-loop:v1  # image in Dockerhub
+        image: coursedemos/nodejs-loop:v1 # image in Dockerhub
         ports:
         - containerPort: 8080
         resources:
@@ -25,5 +25,3 @@ spec:
             cpu: "100m"
           limits:
             memory: "100Mi"
-
-
